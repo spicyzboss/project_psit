@@ -1,9 +1,9 @@
-subject_list = [
+subjects = [
     "1. MATH",
     "2. PHYSICS",
     "0. TERMINATE"
 ]
-subjects = {
+content = {
     # Math
     1:
     {
@@ -21,6 +21,10 @@ subjects = {
         "3. Surface area and Volume":
         {
         # Insert function here
+            ''
+        },
+        "0. Back":
+        {
             ''
         }
     },

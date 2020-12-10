@@ -6,6 +6,7 @@ from time import sleep as delay
 import src.pathway as pathway
 
 # Define function and variable
+bootup_words = "COMPUTIES"
 goodbye = "Goodluck and Goodbye :)"
 
 def clear_screen():
@@ -15,51 +16,73 @@ def clear_screen():
     else:
         sys("clear")
 
-def namebootup(time=4):
+def say_goodbye():
+    '''print goodbye'''
+    clear_screen()
+    print(goodbye)
+    raise exit()
+
+def namebootup():
     '''Name loading'''
-    print("\t\t\x1b[5;30;47m" + 'Computies'  + "\x1b[0m") # Logo project
+    print("\t\t\x1b[5;30;47m" + bootup_words + "\x1b[0m")
     delay(0.5)
 
-def subjectlist():
+def print_subject_list():
     '''subject printout'''
-    for subject in pathway.subject_list: # Show all subject
+    for subject in pathway.subjects: # Show all subject
         print(subject)
         delay(0.5)
 
-def request_input():
-    '''input subject'''
+def request_input(text="SUBJECTS"):
+    """input subject"""
     try:
         global subject
-        subject = int(input("SELECT YOUR SUBJECT ID : "))
+        input_word = "SELECT YOUR %s ID : " % text
+        subject = int(input(input_word))
     except ValueError:
         clear_screen()
         print("INVALID INPUT")
         delay(1)
-        mainscreen()
+        subject_selection()
     except KeyboardInterrupt:
         subject = 0
         clear_screen()
 
-def mainscreen():
+def print_content_subject():
+    '''print subject content'''
+    for content in pathway.content[subject]:
+        print(content)
+        delay(0.5)
+
+def subject_selection():
     '''main screen'''
     clear_screen()
     namebootup()
-    subjectlist()
+    print_subject_list()
     request_input()
+    checker(True)
 
-# Main output
-mainscreen()
+def checker(quit=False):
+    """checker function"""
+    if subject:
+        try:
+            maincontent_selection()
+            if not subject:
+                subject_selection()
+        except KeyError:
+            subject_selection()
+    elif quit:
+        say_goodbye()
+    else:
+        maincontent_selection()
 
-if subject:
+def maincontent_selection():
+    '''maincontent screen'''
     clear_screen()
-    namebootup(1)
-    for content in pathway.subjects[subject]: # Show sub-subject
-        print(' - '+content, f'({len(pathway.subjects[subject][content])})')
-        delay(0.5)
-    mode = list(pathway.subjects[subject].keys())[int(input('Choose number of subject: '))-0] # Find name of dict from input
-    for item in pathway.subjects[subject][mode]: # Show function in sub-subject
-        print('\t- '+item)
-        delay(0.5)
-else:
-    clear_screen()
-    print(goodbye)
+    namebootup()
+    print_content_subject()
+    request_input("CONTENTS")
+    checker()
+
+while True:
+    subject_selection() # Main output
