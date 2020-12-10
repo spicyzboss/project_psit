@@ -1,10 +1,11 @@
 """Computies"""
+# Import module
 from os import system as sys
 from os import name
 from time import sleep as delay
 import src.pathway as pathway
 
-bootup_words = "COMPUTIES"
+# Define function and variable
 goodbye = "Goodluck and Goodbye :)"
 
 def clear_screen():
@@ -14,65 +15,51 @@ def clear_screen():
     else:
         sys("clear")
 
-def say_goodbye():
-    '''print goodbye'''
-    clear_screen()
-    print(goodbye)
-
-def namebootup():
+def namebootup(time=4):
     '''Name loading'''
-    print("\t\t\x1b[5;30;47m" + bootup_words + "\x1b[0m")
+    print("\t\t\x1b[5;30;47m" + 'Computies'  + "\x1b[0m") # Logo project
     delay(0.5)
 
-def print_subject_list():
+def subjectlist():
     '''subject printout'''
-    for subject in pathway.subject:
+    for subject in pathway.subject_list: # Show all subject
         print(subject)
         delay(0.5)
 
-def request_input(text="SUBJECTS"):
-    """input subject"""
+def request_input():
+    '''input subject'''
     try:
         global subject
-        input_word = "SELECT YOUR %s ID : " % text
-        subject = int(input(input_word))
+        subject = int(input("SELECT YOUR SUBJECT ID : "))
     except ValueError:
         clear_screen()
         print("INVALID INPUT")
         delay(1)
-        subject_selection()
+        mainscreen()
     except KeyboardInterrupt:
         subject = 0
         clear_screen()
 
-def print_content_subject():
-    '''print subject content'''
-    for content in pathway.subjects[subject]:
-        print(content)
-        delay(0.5)
-
-def subject_selection():
+def mainscreen():
     '''main screen'''
     clear_screen()
     namebootup()
-    print_subject_list()
+    subjectlist()
     request_input()
 
-def maincontent_selection():
-    '''maincontent screen'''
-    clear_screen()
-    namebootup()
-    print_content_subject()
-    request_input("CONTENTS")
-
-subject_selection()
+# Main output
+mainscreen()
 
 if subject:
-    try:
-        maincontent_selection()
-        if not subject:
-            subject_selection()
-    except KeyError:
-        subject_selection()
+    clear_screen()
+    namebootup(1)
+    for content in pathway.subjects[subject]: # Show sub-subject
+        print(' - '+content, f'({len(pathway.subjects[subject][content])})')
+        delay(0.5)
+    mode = list(pathway.subjects[subject].keys())[int(input('Choose number of subject: '))-0] # Find name of dict from input
+    for item in pathway.subjects[subject][mode]: # Show function in sub-subject
+        print('\t- '+item)
+        delay(0.5)
 else:
-    say_goodbye()
+    clear_screen()
+    print(goodbye)
