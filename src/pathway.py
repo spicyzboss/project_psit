@@ -4,17 +4,34 @@ subjects = [
     "0. TERMINATE"
 ]
 content = {
+    # Math
     1:
-    [
-        "1. Metric",
-        "2. Sets",
-        "3. Surface area and Volume",
-        "0. Back",
-    ],
+    {
+    # Add more sub-subject here
+        "1. Metric":
+        {
+        # Insert function here
+            ''
+        },
+        "2. Sets":
+        {
+        # Insert function here
+            ''
+        },
+        "3. Surface area and Volume":
+        {
+        # Insert function here
+            ''
+        },
+        "0. Back":
+        {
+            ''
+        }
+    },
 
+    # Physics
     2:
-    [
-        "1. Movement",
-        "0. Back",
-    ]
+    {
+
+    }
 }

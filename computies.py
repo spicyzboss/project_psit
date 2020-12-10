@@ -1,9 +1,11 @@
 """Computies"""
+# Import module
 from os import system as sys
 from os import name
 from time import sleep as delay
 import src.pathway as pathway
 
+# Define function and variable
 bootup_words = "COMPUTIES"
 goodbye = "Goodluck and Goodbye :)"
 
@@ -27,7 +29,7 @@ def namebootup():
 
 def print_subject_list():
     '''subject printout'''
-    for subject in pathway.subjects:
+    for subject in pathway.subjects: # Show all subject
         print(subject)
         delay(0.5)
 
@@ -83,4 +85,4 @@ def maincontent_selection():
     checker()
 
 while True:
-    subject_selection()
+    subject_selection() # Main output
