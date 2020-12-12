@@ -3,13 +3,6 @@ from time import sleep as delay
 import math
 import json
 #import แค่ฟังคชันชื่อ complex_number()
-def func_again():
-    """call_back_fun"""
-    print()
-    print("Do you want to calculate in this topic again?(Yes/No): ", end="")
-    yes_no_back = input().upper()
-    if yes_no_back == "YES":
-        complex_number()
 
 def made_sym(num):
     """MADE SYMBOL FOR PRINT"""
@@ -37,7 +30,7 @@ def find_i():
         print("Your Answer of I^%d is -i"%(type_i_complex))
     elif i_calculate == 0:
         print("Your Answer of I^%d is 1"%(type_i_complex))
-    func_again()
+    
 #_____________________________________END I^N______________________________________
 
 def normal_complex_number():
@@ -90,7 +83,7 @@ def normal_complex_number():
                 print("Your Answer of Z1*Z2 is %.2f%si"%((a1_mul_nor*a2_mul_nor)-(b1_mul_nor*b2_mul_nor),made_sym((a1_mul_nor*b2_mul_nor)+(b1_mul_nor*a2_mul_nor))))
         except:
             print("Please input in correct format")
-        func_again()
+        
     #________________________________END CALCULATE NORMAL COMPLEX____________________________________________________
 
     elif type_normal_complex == "FIND INVERSE OF COMPLEX NUMBER":
@@ -108,7 +101,7 @@ def normal_complex_number():
             print("Your Inverse Complex number is Z = %.2f%si"%(a_inverse,made_sym(b_inverse)))
         except:
             print("Please input in correct format")
-        func_again()
+        
     #________________________________END INVERSE NORMAL COMPLEX____________________________________________________
 
     elif type_normal_complex == "FIND CONJUGATE OF COMPLEX NUMBER":
@@ -124,7 +117,7 @@ def normal_complex_number():
             print("Your Conjugate Complex number is Z = %.2f%si"%(a_conjugate,made_sym(b_conjugate)))
         except:
             print("Please input in correct format")
-        func_again()
+        
     #________________________________END CONJUGATE NORMAL COMPLEX____________________________________________________
 
 #________________________________END NORMAL COMPLEX NUMBER____________________________________________________
@@ -206,7 +199,7 @@ def polar_complex_number():
                     print("Your n√Z is %.2f(cos(%.2f) + isin(%.2f))"%(r_root_pol*(1/n_root_pol), (a_root_pol/n_root_pol)+(k*(360/3)), (a_root_pol/n_root_pol)+(k*(360/3))))
         except:
             print("Please input in correct format")
-        func_again()
+        
     #________________________________END CALCULATE POLAR COMPLEX____________________________________________________
 #________________________________END POLAR COMPLEX NUMBER____________________________________________________
 
@@ -226,7 +219,6 @@ def complex_number():
         normal_complex_number()
     elif type_input_set == "POLAR COMPLEX NUMBER":
         polar_complex_number()
-complex_number()
 #________________________________END MAIN FUNCTION____________________________________________________
 
             
