@@ -16,7 +16,7 @@ content = {
             '2. Subtraction': 'add_sub(sub)',
             '3. Multiplication': 'multi()',
             '4. Determinant': 'find_det()',
-            '5. Cramer\'s rule': 'cramer()',
+            '5. Cramer\'s rule': 'find_cramer()',
             '0. Back': 'maincontent_selection()'
         },
         "2. Sets":
