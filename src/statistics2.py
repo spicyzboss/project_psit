@@ -5,14 +5,6 @@ import statistics
 from time import sleep as delay
 import math
 
-def func_again():
-    """call_back_fun"""
-    print()
-    print("Do you want to calculate in this topic again?(Yes/No): ", end="")
-    yes_no_back = input().upper()
-    if yes_no_back == "YES":
-        statistics2()
-
 def relative_position():
     """RELATIVE POSITION FUCTION"""
     delay(0.5)
@@ -59,7 +51,6 @@ def relative_position():
                 before_numqrp = list_data_qrp[int(position_qrp_no//1-1)]
                 answer_qrp_noa = ((after_numqrp-before_numqrp)*(position_qrp_no-(position_qrp_no//1)))+before_numqrp
                 print("Your data %s quartile is %.2f"%(qrp_type_noarrange, answer_qrp_noa))
-            func_again()
     #_______________________________________Decile No arrange_________________________
         elif type_rp_noarrange == "DECILE":
             print("\n")
@@ -90,7 +81,7 @@ def relative_position():
                 before_numdrp = list_data_drp[int(position_drp_no//1-1)]
                 answer_drp_noa = ((after_numdrp-before_numdrp)*(position_drp_no-(position_drp_no//1)))+before_numdrp
                 print("Your data %s quartile is %.2f"%(drp_type_noarrange, answer_drp_noa))
-            func_again()
+            
     #_______________________________________Percentile No arrange_________________________
         elif type_rp_noarrange == "PERCENTILE":
             print("\n")
@@ -121,7 +112,7 @@ def relative_position():
                 before_numprp = list_data_prp[int(position_prp_no//1-1)]
                 answer_prp_noa = ((after_numprp-before_numprp)*(position_prp_no-(position_prp_no//1)))+before_numprp
                 print("Your data %s percentile is %.2f"%(prp_type_noarrange, answer_prp_noa))
-            func_again()
+            
     elif confirm_rp == "YES":
         print()
         print("Which Relative Position do you want to find?")
@@ -166,7 +157,7 @@ def relative_position():
             answer_qrp_arrange = lower_qrp + (width_range*((qrp_position_frequency-sum_before_qrp)/dict_qrp_arrange[list_use_qrp]))
             print()
             print("Your data %s quartile is %.2f"%(qrp_type_arrange, answer_qrp_arrange))
-            func_again()
+            
         #_______________________________________Decile arrange_________________________________________________________________
         elif type_rp_arrange == "DECILE":
             delay(0.25)
@@ -205,7 +196,7 @@ def relative_position():
             answer_drp_arrange = lower_drp + (width_range*((drp_position_frequency-sum_before_drp)/dict_drp_arrange[list_use_drp]))
             print()
             print("Your data %s decile is %.2f"%(drp_type_arrange, answer_drp_arrange))
-            func_again()
+            
         #_______________________________________Percentile arrange_________________________________________________________________
         elif type_rp_arrange == "PERCENTILE":
             delay(0.25)
@@ -244,7 +235,7 @@ def relative_position():
             answer_prp_arrange = lower_prp + (width_range*((prp_position_frequency-sum_before_prp)/dict_prp_arrange[list_use_prp]))
             print()
             print("Your data %s percentile is %.2f"%(prp_type_arrange, answer_prp_arrange))
-            func_again()
+           
 #_______________________________________END RELATIVE POSITION_________________________________________________________________
 def range_finder():
     delay(0.5)
@@ -280,7 +271,7 @@ def range_finder():
             print()
             print("Your data range is %.2f"%(answer_range_noarrange))
             print("Your data coefficient of range is %.2f"%(answer_range_noarrange/answer2_range_noarrange))
-        func_again()
+       
     elif confirm_range == "YES":
         print()
         delay(0.25)
@@ -295,7 +286,7 @@ def range_finder():
         print()
         print("Your data range is %.2f"%(answer_arrange_range))
         print("Your data coefficient of range is %.2f"%(answer_arrange_range/answer2_arrange_range))
-        func_again()
+       
 #_______________________________________END RANGE_______________________________________________________________________________________________________
 def quartile_no(listquartile,quartilenum):
     """QUARTION FUNCTION FOR QD"""
@@ -359,7 +350,7 @@ def quartile_deviation():
             print()
             print("Your data quartile deviation is %.2f"%(answer_noarrange_qdv))
             print("Your data quartile deviation coefficient is %.2f"%(answer2_noarrange_qdv))
-        func_again()
+       
     elif confirm_qdv == "YES":
         delay(0.25)
         print("\n")
@@ -381,7 +372,7 @@ def quartile_deviation():
         print()
         print("Your data quartile deviation is %.2f"%(answer_arrange_qdv))
         print("Your data quartile deviation coefficient is %.2f"%(answer2_arrange_qdv))
-        func_again()
+        
 #_______________________________________END QUARTILE DEVIATION_________________________________________________________________
 def mean_deviation():
     """MEAN DEVIATION FUCTION"""
@@ -420,7 +411,7 @@ def mean_deviation():
             print()
             print("Your data mean deviation is %.2f"%(answer_noarrange_mdv/len(list_data_mdv)))
             print("Your data mean deviation coefficient is %.2f"%((answer_noarrange_mdv/len(list_data_mdv))/mean_noarrange_mdv))
-        func_again()
+       
     elif confirm_mdv == "YES":
         print("\n")
         dict_yes_mdv = {}
@@ -447,7 +438,7 @@ def mean_deviation():
         print()
         print("Your data mean deviation is %.2f"%(answer_arrange_mdv/divide_arrange_mdv))
         print("Your data mean deviation coefficient is %.2f"%((answer_arrange_mdv/divide_arrange_mdv)/mean_arrange_mdv))
-        func_again()
+       
 #_______________________________________END MEAN DEVIATION_________________________________________________________________
 
 def standard_deviation():
@@ -490,7 +481,7 @@ def standard_deviation():
             print()
             print("Your data standard deviation is %.2f"%(answer_noarrange_sdv))
             print("Your data standard deviation coefficient is %.2f"%(answer_noarrange_sdv/(sum_sdv/all_num_sdv)))
-        func_again()
+        
     elif confirm_sdv == "YES":
         delay(0.25)
         print("\n")
@@ -515,7 +506,7 @@ def standard_deviation():
         print()
         print("Your data standard deviation is %.2f"%(answer_arrange_sdv))
         print("Your data standard deviation coefficient is %.2f"%(answer_arrange_sdv/mean_svd_arrange))
-        func_again()
+        
 #_______________________________________END STANDARD DEVIATION_________________________________________________________________
 
 def variance():
@@ -557,7 +548,7 @@ def variance():
             answer_noarrange_variance = ((all_num_variance*sum_expo2_variance)-sum_variance**2)/(all_num_variance*(all_num_variance-1))
             print()
             print("Your data variance is %.2f"%(answer_noarrange_variance))
-        func_again()
+        
     elif confirm_variance == "YES":
         delay(0.25)
         print("\n")
@@ -581,7 +572,7 @@ def variance():
             
         print()
         print("Your data variance is %.2f"%(answer_arrange_variance))
-        func_again()
+       
 #_______________________________________END VARIANCE_________________________________________________________________
 
 def statistics2():
