@@ -9,9 +9,14 @@ content = {
     1:
     {
     # Add more sub-subject here
-        "1. Matrix":
+        "1. Metrix":
         {
         # Insert function here
+            '1. Addition': 'add_sub(add)',
+            '2. Subtraction': 'add_sub(sub)',
+            '3. Multiplication': 'multi()',
+            '4. Determinant': 'find_det()',
+            '5. Cramer\'s rule': 'cramer()'
         },
         "2. Sets":
         {
@@ -23,10 +28,11 @@ content = {
         # Insert function here
             ''
         },
-        "4. Statistics":
+        "4. Staticstic":
         {
         # Insert function here
-            'statistics1()'
+            '1.': 'statistics1()',
+            '2.': 'statistics2()'
         },
         "0. Back":
         {
