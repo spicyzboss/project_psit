@@ -3,15 +3,15 @@ subjects = [
     "2. PHYSICS",
     "0. TERMINATE"
 ]
+
 content = {
     # Math
     1:
     {
     # Add more sub-subject here
-        "1. Metric":
+        "1. Matrix":
         {
         # Insert function here
-            ''
         },
         "2. Sets":
         {
@@ -22,6 +22,11 @@ content = {
         {
         # Insert function here
             ''
+        },
+        "4. Statistics":
+        {
+        # Insert function here
+            'statistics1()'
         },
         "0. Back":
         {
