@@ -4,6 +4,7 @@
 import statistics
 from time import sleep as delay
 import sys
+
 def func_again():
     """call_back_fun"""
     print()
@@ -11,6 +12,7 @@ def func_again():
     yes_no_back = input().upper()
     if yes_no_back == "YES":
         statistics1()
+
 def mean():
     """MEAN FUNCTION"""
     delay(0.5)
@@ -21,7 +23,6 @@ def mean():
     print("Answer: ", end="")
     type_mean = input()
     type_mean = type_mean.upper()
-
     #_______________________________________________________________NORMAL MEAN__________________________________________________________________________________________
     if type_mean == "NORMAL MEAN":
         delay(0.25)
@@ -41,11 +42,10 @@ def mean():
                 if input_data_mean == "END":
                     break
                 else:
-                    try :  
-                        float(input_data_mean) 
+                    try:
+                        float(input_data_mean)
                         res = True
-                    except : 
-
+                    except:
                         res = False
                     if input_data_mean.isnumeric() or res == True:
                         list_data_no_arrnge_mean.append(float(input_data_mean))
@@ -93,11 +93,10 @@ def mean():
                 if input_data_mean == "END":
                     break
                 else:
-                    try :  
-                        float(input_data_mean) 
+                    try:
+                        float(input_data_mean)
                         res = True
-                    except : 
-
+                    except:
                         res = False
                     if input_data_mean.isnumeric() or res == True:
                         list_data_geometric_mean.append(float(input_data_mean))
@@ -112,7 +111,6 @@ def mean():
             print()
             print("Your data geometric mean is %.2f"%(answer_geometric_mean))
         func_again()
-
     #_______________________________________________________________HARMONIC MEAN__________________________________________________________________________________________
     elif type_mean == "HARMONIC MEAN":
         delay(0.25)
@@ -126,11 +124,10 @@ def mean():
                 if input_data_mean == "END":
                     break
                 else:
-                    try :  
-                        float(input_data_mean) 
+                    try:
+                        float(input_data_mean)
                         res = True
-                    except : 
-
+                    except:
                         res = False
                     if input_data_mean.isnumeric() or res == True:
                         list_data_harmonic_mean.append(float(input_data_mean))
@@ -148,7 +145,6 @@ def mean():
             print()
             print("Your data harmonic mean is %.2f"%(answer_harmonic_mean))
         func_again()
-
     #_______________________________________________________________WEIGHTED MEAN__________________________________________________________________________________________
     elif type_mean == "WEIGHTED MEAN":
         delay(0.25)
@@ -164,10 +160,10 @@ def mean():
             if vaule_wmean == "END":
                 break
             else:
-                try :  
-                    float(vaule_wmean) 
+                try:
+                    float(vaule_wmean)
                     res = True
-                except : 
+                except:
                     res = False
                 if vaule_wmean.isnumeric() or res == True:
                     list_vaules_weight_mean.append(float(vaule_wmean))
@@ -189,6 +185,7 @@ def mean():
             print("Your data weighted mean is %.2f"%(answer_weight_mean))
         func_again()
 #_______________________________________________________________END MEAN__________________________________________________________________________________________
+
 def med():
     """MEDIAN FUNCTION"""
     delay(0.5)
@@ -209,11 +206,10 @@ def med():
                 if input_data_median == "END":
                     break
                 else:
-                    try :  
-                        float(input_data_median) 
+                    try:
+                        float(input_data_median)
                         res = True
-                    except : 
-
+                    except:
                         res = False
                     if input_data_median.isnumeric() or res == True:
                         list_data_median.append(float(input_data_median))
@@ -232,7 +228,7 @@ def med():
         range_median = int(input())
         dict_med_arrange = {}
         print("please input the range from small to big")
-        for i in range(range_median):
+        for _ in range(range_median):
             print()
             print("Input range(Input example \"1-10\"): ", end="")
             range_med_input = input()
@@ -261,6 +257,7 @@ def med():
         print("Your data median is %.2f"%(answer_median_arrange))
         func_again()
 #_______________________________________________________________END MEDIAN__________________________________________________________________________________________
+
 def mod():
     """MODE FUNCTION"""
     delay(0.5)
@@ -281,10 +278,10 @@ def mod():
             if input_data_mode == "END":
                 break
             else:
-                try :  
-                    float(input_data_mode) 
+                try:
+                    float(input_data_mode)
                     res = True
-                except : 
+                except:
                     res = False
                 if input_data_mode.isnumeric() or res == True:
                     list_data_mode.append(float(input_data_mode))
@@ -327,19 +324,19 @@ def mod():
         lower_mode = float(tuple_use_mode[0])-0.5
         list_from_dict_mode = list(dict_mode_arrange)
         before_mode = dict_mode_arrange[list_from_dict_mode[list_from_dict_mode.index(tuple_use_mode)-1]]
-        try :
+        try:
             after_mode = dict_mode_arrange[list_from_dict_mode[list_from_dict_mode.index(tuple_use_mode)+1]]
             now_mode = dict_mode_arrange[tuple_use_mode]
             answer_mode_arrange = lower_mode + width_mode*((now_mode-before_mode)/((now_mode-before_mode)+(now_mode-after_mode)))
-            
             print()
             print("Your data mode is %.2f"%(answer_mode_arrange))
-        except :
+        except:
             print()
             print("Sorry we can't calculate mode of this data")
             print("Your mode is in the last range")
         func_again()
 #_______________________________________________________________END MODE__________________________________________________________________________________________
+
 def statistics1():
     """Main Function"""
     print()
@@ -356,13 +353,3 @@ def statistics1():
     elif type_input_stat1 == "MODE":
         mod()
 #_______________________________________________________________END MAIN FUNCTION__________________________________________________________________________________________
-
-
-
-
-
-
-                
-            
-        
-
