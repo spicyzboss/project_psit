@@ -1,9 +1,12 @@
 """Computies"""
 # Import module
-from os import system as sys
+from os import system
 from os import name
 from time import sleep as delay
 import src.pathway as pathway
+from src.matrix import *
+from src.statistic1 import *
+from src.statistics2 import *
 
 # Define function and variable
 bootup_words = "COMPUTIES"
@@ -12,9 +15,9 @@ goodbye = "Goodluck and Goodbye :)"
 def clear_screen():
     """clear screen"""
     if name == "nt":
-        sys("cls")
+        system("cls")
     else:
-        sys("clear")
+        system("clear")
 
 def say_goodbye():
     """print goodbye"""
@@ -65,6 +68,19 @@ def content_request_input():
         content = 0
         clear_screen()
 
+def subcontent_request_input():
+    """input subcontent"""
+    try:
+        global subcontent
+        input_word = "SELECT YOUR CONTENTS ID : "
+        subcontent = int(input(input_word))
+    except ValueError:
+        invalid_input()
+        subcontent_selection()
+    except KeyboardInterrupt:
+        subcontent = 0
+        clear_screen()
+
 def print_content_subject():
     """print subject content"""
     try:
@@ -74,6 +90,12 @@ def print_content_subject():
     except KeyError:
         invalid_input()
         subject_selection()
+
+def print_subcontent():
+    """subcontent print function"""
+    for data in pathway.content[subject][list(pathway.content[subject].keys())[content-1]]:
+        print(data)
+        delay(0.5)
 
 def subject_checker():
     """checker function"""
@@ -85,18 +107,47 @@ def subject_checker():
 def content_checker():
     """checker function"""
     if content > 0:
-        call_another_file()
+        subcontent_selection()
     elif content < 0:
         invalid_input()
         maincontent_selection()
     else:
         subject_selection()
 
+def subcontent_checker():
+    """checker function"""
+    if subcontent > 0:
+        call_another_file()
+    elif subcontent < 0:
+        invalid_input()
+        subcontent_selection()
+    else:
+        maincontent_selection()
+
+def subcontent_selection():
+    """subcontent selection"""
+    clear_screen()
+    namebootup()
+    print_subcontent()
+    subcontent_request_input()
+    subcontent_checker()
+
+def ask_to_again():
+    """ask for calculate again"""
+    again = input("TERMINATE SYSTEM?(Y/N) : ").upper()
+    if again == "Y":
+        say_goodbye()
+    elif again == "N":
+        subcontent_selection()
+    else:
+        invalid_input()
+        subcontent_selection()
+
 def call_another_file():
     """call file"""
-    namebootup()
-    for data in list(pathway.content[subject].keys())[content-1]:
-        eval(data)
+    data = pathway.content[subject][list(pathway.content[subject].keys())[content-1]][list(pathway.content[subject][list(pathway.content[subject].keys())[content-1]])[subcontent-1]]
+    eval(data)
+    ask_to_again()
 
 def subject_selection():
     """main screen"""
@@ -114,5 +165,5 @@ def maincontent_selection():
     content_request_input()
     content_checker()
 
-while True:
-    subject_selection() # Main output
+# while True:
+subject_selection() # Main output

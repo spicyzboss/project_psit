@@ -606,5 +606,4 @@ def statistics2():
         standard_deviation()
     elif type_input_stat2 == "VARIANCE":
         variance()
-statistics2()
 #_______________________________________________________________END MAIN FUNCTION__________________________________________________________________________________________
