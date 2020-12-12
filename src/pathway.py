@@ -12,8 +12,8 @@ content = {
         "1. Matrix":
         {
         # Insert function here
-            '1. Addition': 'add_sub(add)',
-            '2. Subtraction': 'add_sub(sub)',
+            '1. Addition': 'add_sub("add")',
+            '2. Subtraction': 'add_sub("sub")',
             '3. Multiplication': 'multi()',
             '4. Determinant': 'find_det()',
             '5. Cramer\'s rule': 'find_cramer()',
