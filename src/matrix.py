@@ -28,11 +28,7 @@ def addder(dimen, row=0):
             output[row][col] += j
             col += 1
         row += 1
-    for i in output:
-        print(end="[")
-        for j in range(column):
-            print('%5d'%(i[j]), end='|'*(j != column-1))
-        print("]")
+    print_output(output, column)
 
 def subtract(dimen, row=0):
     '''Subtraction'''
@@ -43,20 +39,19 @@ def subtract(dimen, row=0):
             output[row][col] -= j
             col += 1
         row += 1
-    for i in output:
-        print(end="[")
-        for j in range(column):
-            print('%5d'%(i[j]), end='|'*(j != column-1))
-        print("]")
+    print_output(output, column)
 
 def multiple():
     '''Multiplication'''
     output = []
-    mxt1, mxt2 = matrix[0][-1], matrix[1][-1]
-    for i in range(mxt1[0]):
-        for j in range(mxt2[1]):
-            run = []
-            for x in range(mxt1[1]):
+    mxt1, mxt2 = matrix[0], matrix[1]
+    for x in range(mxt1[-1][0]):
+        run = []
+        for _ in range(mxt1[-1][1]):
+            for i in range(mxt2[-1][1]):
+                run += [sum([mxt1[x][y]*mxt2[y][i] for y in range(mxt2[-1][0])])]
+        output.append(run)
+    print_output(output, mxt2[-1][1])
 
 def determinant():
     '''Determinant'''
@@ -77,6 +72,15 @@ def determinant():
 
 def cramer():
     '''Cramer\'s rule'''
+
+def print_output(output, column):
+    '''Print output matrix'''
+    print('Answer', end='\n======\n')
+    for i in output:
+        print(end="[")
+        for j in range(column):
+            print('%5d'%(i[j]), end='|'*(j != column-1))
+        print("]")
 
 def before_addsub(addsub):
     '''Check matrix'''
