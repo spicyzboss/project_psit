@@ -25,7 +25,7 @@ def work():
         print("Your Work of the object is %.2f J"%w_work)
     except:
         print("Please input in correct format")
-        
+
     #________________________________END FIND WORK____________________________________________________
 
 def energy():
@@ -130,7 +130,6 @@ def work_energy():
     print("WORK & ENERGY")
     print()
     print("► Find Work\t\t► Find Energy\t\t► Find Power")
-    
     print()
     print("What topic do you want to find?: ", end="")
     type_input_circular = input().upper()
@@ -140,5 +139,4 @@ def work_energy():
         energy()
     elif type_input_circular == "FIND POWER":
         power()
-
 #________________________________END MAIN FUNCTION____________________________________________________
