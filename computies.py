@@ -13,6 +13,7 @@ import src.math.complex_number as complex_num
 import src.math.conic as conic
 #-----------Physics subject-----------#
 import src.physics.circular_motion as circular
+import src.physics.work_energy as work
 
 bootup_words = "COMPUTIES"
 goodbye = "Goodluck and Goodbye :)"

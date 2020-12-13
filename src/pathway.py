@@ -67,6 +67,11 @@ content = {
             '1. Circular motion': 'circular.circular_motion()',
             '0. Back': 'maincontent_selection()'
         },
+        "2. Work energy":
+        {
+            '1. Work energy': 'work.work_energy()',
+            '0. Back': 'maincontent_selection()'
+        },
         '0. Back':
         {
             ''
