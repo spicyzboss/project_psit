@@ -15,7 +15,6 @@ def made_sym(num):
 def find_i():
     """FIND I^N"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find I^N topic!  (\"^\" mean Exponential)")
     delay(0.5)
     print()
@@ -36,7 +35,6 @@ def find_i():
 def normal_complex_number():
     """NORMAL COMPLEX FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Normal Complex Number topic!")
     delay(0.5)
     print()
@@ -125,7 +123,6 @@ def normal_complex_number():
 def polar_complex_number():
     """POLAR COMPLEX NUMBER"""
     delay(0.5)
-    print("\n")
     print("Welcome to Polar Complex Number topic!")
     delay(0.5)
     print()
