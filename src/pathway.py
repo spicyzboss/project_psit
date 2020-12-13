@@ -67,7 +67,12 @@ content = {
             '1. Circular motion': 'circular.circular_motion()',
             '0. Back': 'maincontent_selection()'
         },
-        "2. Work energy":
+        "2. Projectile":
+        {
+            '1. Projectile': 'projectile.projectile()',
+            '0. Back': 'maincontent_selection()'
+        },
+        "3. Work energy":
         {
             '1. Work energy': 'work.work_energy()',
             '0. Back': 'maincontent_selection()'
