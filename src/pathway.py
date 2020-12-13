@@ -11,7 +11,9 @@ content = {
     # Add more sub-subject here
         "1. Complex number":
         {
-            '1. Complex number': 'complex_num.complex_number()',
+            '1. Find I^N': 'complex_num.find_i()',
+            '2. Normal complex number': 'complex_num.normal_complex_number()',
+            '3. Polar complex number': 'complex_num.polar_complex_number()',
             '0. Back': 'maincontent_selection()'
         },
         "2. Conic":
