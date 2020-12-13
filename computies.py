@@ -1,10 +1,15 @@
 """Computies"""
 # Import module
-from os import system
-from os import name
+from os import system, name
 from time import sleep as delay
 import src.pathway as pathway
-import src.math as math 
+import src.math.matrix as matrix
+import src.math.set as mathset
+import src.math.sequence_series as sequence
+import src.math.statistics1 as statistics1
+import src.math.statistics2 as statistics2
+import src.math.complex_number as complex_num
+import src.math.conic as conic
 
 #
 bootup_words = "COMPUTIES"
