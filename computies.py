@@ -61,7 +61,7 @@ def invalid_input():
     """invalid input print"""
     clear_screen()
     print("INVALID INPUT")
-    delay(1)
+    delay(0.5)
 
 def content_request_input():
     """input content"""
@@ -160,7 +160,11 @@ def call_another_file():
     try:
         data = pathway.content[subject][list(pathway.content[subject].keys())[content-1]][list(pathway.content[subject][list(pathway.content[subject].keys())[content-1]])[subcontent-1]]
         clear_screen()
-        eval(data)
+        try:
+            eval(data)
+        except:
+            print('Coming soon...')
+            delay(0.5)
     except IndexError:
         invalid_input()
         subcontent_selection()
@@ -182,5 +186,10 @@ def maincontent_selection():
     content_request_input()
     content_checker()
 
-# while True:
-subject_selection() # Main output
+def start_up():
+    '''Start up Computies'''
+    subject_selection()
+
+#-------------------Start project Computies-------------------#
+if __name__ == "__main__":
+    start_up()
