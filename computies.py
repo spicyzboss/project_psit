@@ -4,15 +4,16 @@ from os import system, name
 from time import sleep as delay
 import src.pathway as pathway
 #-----------Math subject-----------#
-import src.math.matrix as matrix
-import src.math.set as mathset
-import src.math.sequence_series as sequence
-import src.math.statistics1 as statistics1
-import src.math.statistics2 as statistics2
 import src.math.complex_number as complex_num
 import src.math.conic as conic
+import src.math.matrix as matrix
+import src.math.sequence_series as sequence
+import src.math.set as mathset
+import src.math.statistics1 as statistics1
+import src.math.statistics2 as statistics2
 #-----------Physics subject-----------#
 import src.physics.circular_motion as circular
+import src.physics.projectile as projectile
 import src.physics.work_energy as work
 
 bootup_words = "COMPUTIES"
@@ -145,7 +146,7 @@ def subcontent_selection():
 
 def ask_to_again():
     """ask for calculate again"""
-    again = input("TERMINATE SYSTEM?(Y/N) : ").upper()
+    again = input("\nTERMINATE SYSTEM?(Y/N) : ").upper()
     if again == "Y":
         say_goodbye()
     elif again == "N":
@@ -158,11 +159,11 @@ def call_another_file():
     """call file"""
     try:
         data = pathway.content[subject][list(pathway.content[subject].keys())[content-1]][list(pathway.content[subject][list(pathway.content[subject].keys())[content-1]])[subcontent-1]]
+        clear_screen()
         eval(data)
-    except:
+    except IndexError:
         invalid_input()
         subcontent_selection()
-    print('-------------------------------')
     ask_to_again()
 
 def subject_selection():
