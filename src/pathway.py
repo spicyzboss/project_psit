@@ -32,7 +32,7 @@ content = {
         "4. Staticstic":
         {
         # Insert function here
-            '1. Statistics Part 1': 'statistics1()',
+            '1. Statistics Part 1': 'statistic1.statistics1()',
             '2. Statistics Part 2': 'statistics2()',
             '0. Back': 'maincontent_selection()'
         },
