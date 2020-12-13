@@ -4,7 +4,7 @@ from os import system
 from os import name
 from time import sleep as delay
 import src.pathway as pathway
-from src import *
+import src.math as math
 
 # 
 bootup_words = "COMPUTIES"
