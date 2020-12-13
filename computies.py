@@ -6,7 +6,7 @@ from time import sleep as delay
 import src.pathway as pathway
 import src.math as math
 
-# 
+#
 bootup_words = "COMPUTIES"
 goodbye = "Goodluck and Goodbye :)"
 
