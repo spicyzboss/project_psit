@@ -91,7 +91,7 @@ content = {
         {
             '1. Find Linear Velocity': 'circular.linear_velocity()',
             '2. Find Angular Velocity': 'circular.angular_velocity()',
-            '3. Find Acceleration into the center': 'acceleration_tocenter()',
+            '3. Find Acceleration into the center': 'circular.acceleration_tocenter()',
             '4. Find Centripetal Force': 'circular.centipetal_force()',
             '0. Back': 'maincontent_selection()'
         },
