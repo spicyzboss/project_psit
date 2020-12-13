@@ -29,11 +29,11 @@ content = {
         # Insert function here
             ''
         },
-        "4. Staticstic":
+        "4. Statistics":
         {
         # Insert function here
-            '1. Statistics Part 1': 'math.statistic1.statistics1()',
-            '2. Statistics Part 2': 'math.statistic2.statistics2()',
+            '1. Statistics Part 1': 'math.statistics1.statistics1()',
+            '2. Statistics Part 2': 'math.statistics2.statistics2()',
             '0. Back': 'maincontent_selection()'
         },
         "0. Back":
