@@ -5,7 +5,6 @@ import math
 def distance_ptop():
     """DISTANCE BETWEEN POINT AND POINT"""
     delay(0.5)
-    print("\n")
     print("Welcome to Distance between Point and Point topic!")
     delay(0.5)
     print()
@@ -38,7 +37,6 @@ def line_made(num):
 def distance_ptol():
     """DISTANCE BETWEEN POINT AND LINE"""
     delay(0.5)
-    print("\n")
     print("Welcome to Distance between Point and Line topic!")
     delay(0.5)
     print()
@@ -68,7 +66,6 @@ def distance_ptol():
 def distance_parallel():
     """DISTANCE BETWEEN PARALLEL LINE"""
     delay(0.5)
-    print("\n")
     print("Welcome to Distance between Parallel Line topic!")
     delay(0.5)
     print()
@@ -100,7 +97,6 @@ def distance_parallel():
 def half_2p():
     """HALF POINT BETWEEN 2 POINTS"""
     delay(0.5)
-    print("\n")
     print("Welcome to Half Point between 2 points topic!")
     delay(0.5)
     print()
@@ -126,7 +122,6 @@ def half_2p():
 def circle_equation():
     """FIND RADIAUS AND CENTER POINT OF CIRCLE"""
     delay(0.5)
-    print("\n")
     print("Welcome to Circle Conic topic!")
     print("This Topic will find Center Point and Radius for you")
     delay(0.5)
@@ -177,7 +172,6 @@ def circle_equation():
 def parabola_equation():
     """FIND TYPE ,FOCUS POINT,DIRECTRIX EQUATION, LATUS LECTUM LENGTH"""
     delay(0.5)
-    print("\n")
     print("Welcome to Parabola Conic topic!")
     print("This Topic will find Type of graph, Focus Point, Directrix equation and Latus Lectum Length for you")
     delay(0.5)
@@ -255,7 +249,6 @@ def ellipse_equation():
     """FIND MAJOR AXIS, FOCUS POINT, VERTEX POINT, MAJOR AXIS LENGTH\
         , MINOR AXIS LENGTH, LATUS LECTUM LENGTH"""
     delay(0.5)
-    print("\n")
     print("Welcome to Ellipse Conic topic!")
     print("This Topic will find Major Axis, Vertex, Focus Point, Point end of minor, Length of Major/Minor Axis and Length of Latus Lectum for you")
     delay(0.5)
@@ -357,7 +350,6 @@ def hyperbola_equation():
     """FIND CENTER POINT, FOCUS POINT, VERTEX POINT, MAJOR AXIS LENGTH\
         , MINOR AXIS LENGTH, LATUS LECTUM LENGTH, ASYMTOTE"""
     delay(0.5)
-    print("\n")
     print("Welcome to Hyperbola Conic topic!")
     print("This Topic will find Center Point, Vertex, Focus Point, Length of Major/Minor Axis,Length of Latus Lectum and Asymtotefor you")
     delay(0.5)

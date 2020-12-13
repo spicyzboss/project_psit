@@ -6,7 +6,6 @@ import math
 def u_vector():
     """U VECTOR"""
     delay(0.5)
-    print("\n")
     print("Welcome to U VECTOR topic!")
     delay(0.5)
     try:
@@ -31,7 +30,6 @@ def u_vector():
 def x_axis():
     """FIND x_axis"""
     delay(0.5)
-    print("\n")
     print("Welcome to X Axis topic!")
     delay(0.5)
     print()
@@ -77,7 +75,6 @@ def x_axis():
 def y_axis():
     """FIND Y AXIS"""
     delay(0.5)
-    print("\n")
     print("Welcome to Y Axis topic!")
     delay(0.5)
     print()
@@ -267,7 +264,6 @@ def y_axis():
 def max_angle():
     """ANGLE THAT MAKE MAX SY AND MAX SX"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find Angle that make Sy max and Sx max topic!")
     delay(0.5)
     try:
@@ -289,7 +285,6 @@ def max_angle():
 def sy_max():
     """FIND SY MAX"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find Sy max topic!")
     delay(0.5)
     try:
@@ -311,7 +306,6 @@ def sy_max():
 def sx_max():
     """FIND SY MAX"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find Sx max topic!")
     delay(0.5)
     try:
@@ -333,7 +327,6 @@ def sx_max():
 def time_total():
     """FIND TOTAL TIME THAT OBJECT FALL DOWN"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find total time topic!")
     delay(0.5)
     try:

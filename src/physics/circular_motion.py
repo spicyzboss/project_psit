@@ -6,7 +6,6 @@ import math
 def linear_velocity():
     """LINEAR VELO FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Linear Velocity topic!")
     delay(0.5)
     print()
@@ -53,7 +52,6 @@ def linear_velocity():
 def angular_velocity():
     """ANGULAR VELO FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Angular Velocity topic!")
     delay(0.5)
     print()
@@ -107,7 +105,6 @@ def angular_velocity():
 def acceleration_tocenter():
     """ACCELERATION INTO THE CENTER"""
     delay(0.5)
-    print("\n")
     print("Welcome to Acceleration into the center topic!")
     delay(0.5)
     try:
@@ -130,7 +127,6 @@ def acceleration_tocenter():
 def centipetal_force():
     """CENTRIPETAL FORCE"""
     delay(0.5)
-    print("\n")
     print("Welcome to Centripetal Force topic!")
     delay(0.5)
     print()

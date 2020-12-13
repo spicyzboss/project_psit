@@ -8,7 +8,6 @@ import math
 def relative_position():
     """RELATIVE POSITION FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Relative Position topic!")
     delay(0.5)
     print("Do your data already arrange?")
@@ -23,7 +22,7 @@ def relative_position():
         type_rp_noarrange = input().upper()
     #_______________________________________QUARTILE No arrange_________________________
         if type_rp_noarrange == "QUARTILE":
-            print("\n")
+    
             print("Input quartile that you want to find(1-4): ", end="")
             qrp_type_noarrange = int(input())
             print()
@@ -53,7 +52,7 @@ def relative_position():
                 print("Your data %s quartile is %.2f"%(qrp_type_noarrange, answer_qrp_noa))
     #_______________________________________Decile No arrange_________________________
         elif type_rp_noarrange == "DECILE":
-            print("\n")
+    
             print("Input decile that you want to find(1-10): ", end="")
             drp_type_noarrange = int(input())
             print()
@@ -84,7 +83,7 @@ def relative_position():
             
     #_______________________________________Percentile No arrange_________________________
         elif type_rp_noarrange == "PERCENTILE":
-            print("\n")
+    
             print("Input percentile that you want to find(1-100): ", end="")
             prp_type_noarrange = int(input())
             print()
@@ -122,7 +121,7 @@ def relative_position():
         #_______________________________________Quartile arrange_________________________________________________________________
         if type_rp_arrange == "QUARTILE":
             delay(0.25)
-            print("\n")
+    
             print("Input quartile that you want to find(1-4): ", end="")
             qrp_type_arrange = int(input())
             print()
@@ -161,7 +160,7 @@ def relative_position():
         #_______________________________________Decile arrange_________________________________________________________________
         elif type_rp_arrange == "DECILE":
             delay(0.25)
-            print("\n")
+    
             print("Input decile that you want to find(1-10): ", end="")
             drp_type_arrange = int(input())
             print()
@@ -200,7 +199,7 @@ def relative_position():
         #_______________________________________Percentile arrange_________________________________________________________________
         elif type_rp_arrange == "PERCENTILE":
             delay(0.25)
-            print("\n")
+    
             print("Input percentile that you want to find(1-100): ", end="")
             prp_type_arrange = int(input())
             print()
@@ -239,7 +238,6 @@ def relative_position():
 #_______________________________________END RELATIVE POSITION_________________________________________________________________
 def range_finder():
     delay(0.5)
-    print("\n")
     print("Welcome to Range and Coefficient of Range topic!")
     delay(0.5)
     print("Do your data already arrange?")
@@ -318,7 +316,6 @@ def quartilearrange(dict_qrp_arrange, qrp_type_arrange):
 def quartile_deviation():
     """QUARTILE DEVIATION FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Quartile Deviation and its Coefficient topic!")
     delay(0.5)
     print("Do your data already arrange?")
@@ -326,7 +323,7 @@ def quartile_deviation():
     print("Answer: ", end="")
     confirm_qdv = input().upper()
     if confirm_qdv == "NO":
-        print("\n")
+
         list_data_qdv = []
         delay(0.25)
         print("Input data that you want to find quatile deviation and coefficient (if you want to stop, input \"END\"): ")
@@ -353,7 +350,7 @@ def quartile_deviation():
        
     elif confirm_qdv == "YES":
         delay(0.25)
-        print("\n")
+
         print("How many range of data?: ", end="")
         range_qdv_arrange = int(input())
         dict_qdv_arrange = {}
@@ -377,7 +374,6 @@ def quartile_deviation():
 def mean_deviation():
     """MEAN DEVIATION FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Mean Deviation and its Coefficient topic!")
     delay(0.5)
     print("Do your data already arrange?")
@@ -385,7 +381,7 @@ def mean_deviation():
     print("Answer: ", end="")
     confirm_mdv = input().upper()
     if confirm_mdv == "NO":
-        print("\n")
+
         list_data_mdv = []
         delay(0.25)
         print("Input data that you want to find mean deviation (if you want to stop, input \"END\"): ")
@@ -413,7 +409,7 @@ def mean_deviation():
             print("Your data mean deviation coefficient is %.2f"%((answer_noarrange_mdv/len(list_data_mdv))/mean_noarrange_mdv))
        
     elif confirm_mdv == "YES":
-        print("\n")
+
         dict_yes_mdv = {}
         delay(0.25)
         print("How many vaule in the table?: ", end="")
@@ -444,7 +440,6 @@ def mean_deviation():
 def standard_deviation():
     """STANDARD DEVIATION FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Standard Deviation and its Coefficient topic!")
     delay(0.5)
     print("Do your data already arrange?")
@@ -452,7 +447,7 @@ def standard_deviation():
     print("Answer: ", end="")
     confirm_sdv = input().upper()
     if confirm_sdv == "NO":
-        print("\n")
+
         list_data_sdv = []
         delay(0.25)
         print("Input data that you want to find standard deviation and Coefficient (if you want to stop, input \"END\"): ")
@@ -484,7 +479,7 @@ def standard_deviation():
         
     elif confirm_sdv == "YES":
         delay(0.25)
-        print("\n")
+
         print("How many range of data?: ", end="")
         range_sdv = int(input())
         dict_yes_sdv = {}
@@ -512,7 +507,6 @@ def standard_deviation():
 def variance():
     """VARIANCE FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Variance topic!")
     delay(0.5)
     print("Do your data already arrange?")
@@ -520,7 +514,7 @@ def variance():
     print("Answer: ", end="")
     confirm_variance = input().upper()
     if confirm_variance == "NO":
-        print("\n")
+
         list_data_variance = []
         delay(0.25)
         print("Input data that you want to find standard deviation (if you want to stop, input \"END\"): ")
@@ -551,7 +545,7 @@ def variance():
         
     elif confirm_variance == "YES":
         delay(0.25)
-        print("\n")
+
         print("How many range of data?: ", end="")
         range_variance = int(input())
         dict_yes_variance = {}

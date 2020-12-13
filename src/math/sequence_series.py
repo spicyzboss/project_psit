@@ -6,7 +6,6 @@ import math
 def sequence():
     """FIND N TERM FROM ARITHMETRIC AND GEOMETRIC SEQUENCE"""
     delay(0.5)
-    print("\n")
     print("Welcome to Sequence topic!")
     delay(0.5)
     print()
@@ -47,7 +46,6 @@ def sequence():
 def sigma():
     """FIND SUM OF 1toN 1^2toN^2 and 1^3toN^3"""
     delay(0.5)
-    print("\n")
     print("Welcome to Sigma topic!")
     delay(0.5)
     print()
@@ -90,7 +88,6 @@ def sigma():
 def series():
     """Find series of arithmetic and geometric"""
     delay(0.5)
-    print("\n")
     print("Welcome to Series topic!")
     delay(0.5)
     print()

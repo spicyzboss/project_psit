@@ -8,7 +8,6 @@ import sys
 def mean():
     """MEAN FUNCTION"""
     delay(0.5)
-    print("\n")
     print("What Type of MEAN do you want to find?")
     delay(0.5)
     print("► Normal Mean","► Geometric Mean","► Harmonic Mean","► Weighted mean", sep="\n")
@@ -18,14 +17,14 @@ def mean():
     #_______________________________________________________________NORMAL MEAN__________________________________________________________________________________________
     if type_mean == "NORMAL MEAN":
         delay(0.25)
-        print("\n")
+
         print("Do your data alreay arrange?")
         print("► Yes\t\t\t► No")
         print("Answer: ", end="")
         confirm_mean = input().upper()
         #Normal mean no arrange
         if confirm_mean == "NO":
-            print("\n")
+    
             list_data_no_arrnge_mean = []
             delay(0.25)
             print("Input data that you want to calculate (if you want to stop, input \"END\"): ")
@@ -50,7 +49,7 @@ def mean():
             
         #Normal mean with arrange
         elif confirm_mean == "YES":
-            print("\n")
+    
             dict_yes_mean = {}
             delay(0.25)
             print("How many vaule in the table?: ", end="")
@@ -75,7 +74,7 @@ def mean():
     #_______________________________________________________________GEOMETRIC MEAN__________________________________________________________________________________________
     elif type_mean == "GEOMETRIC MEAN":
         delay(0.25)
-        print("\n")
+
         print("Input data that you want to calculate (if you want to stop, input \"END\"): ")
         root_gmean = 0
         in_gmean = 1
@@ -106,7 +105,7 @@ def mean():
     #_______________________________________________________________HARMONIC MEAN__________________________________________________________________________________________
     elif type_mean == "HARMONIC MEAN":
         delay(0.25)
-        print("\n")
+
         print("Input data that you want to calculate (if you want to stop, input \"END\"): ")
         top_hmean = 0
         bottom_hmean = 0
@@ -140,7 +139,7 @@ def mean():
     #_______________________________________________________________WEIGHTED MEAN__________________________________________________________________________________________
     elif type_mean == "WEIGHTED MEAN":
         delay(0.25)
-        print("\n")
+
         list_vaules_weight_mean = []
         list_weight_weight_mean = []
         divide_weight_mean = 0
@@ -181,7 +180,6 @@ def mean():
 def med():
     """MEDIAN FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to median finder!")
     delay(0.5)
     print("Do your data alreay arrange?")
@@ -189,7 +187,7 @@ def med():
     print("Answer: ", end="")
     confirm_median = input().upper()
     if confirm_median == "NO":
-            print("\n")
+    
             list_data_median = []
             delay(0.25)
             print("Input data that you want to find median (if you want to stop, input \"END\"): ")
@@ -215,7 +213,7 @@ def med():
             
     elif confirm_median == "YES":
         delay(0.25)
-        print("\n")
+
         print("How many range of data?: ", end="")
         range_median = int(input())
         dict_med_arrange = {}
@@ -253,7 +251,6 @@ def med():
 def mod():
     """MODE FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to mode finder!")
     delay(0.5)
     print("Do your data alreay arrange?")
@@ -261,7 +258,7 @@ def mod():
     print("Answer: ", end="")
     confirm_mode = input().upper()
     if confirm_mode == "NO":
-        print("\n")
+
         list_data_mode = []
         delay(0.25)
         print("Input data that you want to find mode (if you want to stop, input \"END\"): ")
@@ -292,7 +289,7 @@ def mod():
         
     elif confirm_mode == "YES":
         delay(0.25)
-        print("\n")
+
         print("How many range of data?: ", end="")
         range_mode = int(input())
         dict_mode_arrange = {}

@@ -7,7 +7,6 @@ import json
 def union_finder():
     """UNION FINDER FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Union topic!")
     delay(0.5)
     print()
@@ -70,7 +69,6 @@ def union_finder():
 def intersect_finder():
     """Intersect FINDER FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Intersect topic!")
     delay(0.5)
     print()
@@ -139,7 +137,6 @@ def intersect_finder():
 def difference_finder():
     """DIFFERENCE FINDER FUCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Difference topic!")
     delay(0.5)
     print()
