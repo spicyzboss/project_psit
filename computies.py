@@ -3,6 +3,7 @@
 from os import system, name
 from time import sleep as delay
 import src.pathway as pathway
+#-----------Math subject-----------#
 import src.math.matrix as matrix
 import src.math.set as mathset
 import src.math.sequence_series as sequence
@@ -10,8 +11,9 @@ import src.math.statistics1 as statistics1
 import src.math.statistics2 as statistics2
 import src.math.complex_number as complex_num
 import src.math.conic as conic
+#-----------Physics subject-----------#
+import src.physics.circular_motion as circular
 
-#
 bootup_words = "COMPUTIES"
 goodbye = "Goodluck and Goodbye :)"
 
@@ -91,15 +93,19 @@ def print_content_subject():
         for content in pathway.content[subject]:
             print(content)
             delay(0.5)
-    except KeyError:
+    except:
         invalid_input()
         subject_selection()
 
 def print_subcontent():
     """subcontent print function"""
-    for data in pathway.content[subject][list(pathway.content[subject].keys())[content-1]]:
-        print(data)
-        delay(0.5)
+    try:
+        for data in pathway.content[subject][list(pathway.content[subject].keys())[content-1]]:
+            print(data)
+            delay(0.5)
+    except:
+        invalid_input()
+        maincontent_selection()
 
 def subject_checker():
     """checker function"""
@@ -149,8 +155,13 @@ def ask_to_again():
 
 def call_another_file():
     """call file"""
-    data = pathway.content[subject][list(pathway.content[subject].keys())[content-1]][list(pathway.content[subject][list(pathway.content[subject].keys())[content-1]])[subcontent-1]]
-    eval(data)
+    try:
+        data = pathway.content[subject][list(pathway.content[subject].keys())[content-1]][list(pathway.content[subject][list(pathway.content[subject].keys())[content-1]])[subcontent-1]]
+        eval(data)
+    except:
+        invalid_input()
+        subcontent_selection()
+    print('-------------------------------')
     ask_to_again()
 
 def subject_selection():
