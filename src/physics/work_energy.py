@@ -6,7 +6,6 @@ import math
 def work():
     """WORK FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find Work topic!")
     delay(0.5)
     try:
@@ -31,7 +30,6 @@ def work():
 def energy():
     """ENERGY FUNCTION"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find Energy topic!")
     delay(0.5)
     print()
@@ -90,7 +88,6 @@ def energy():
 def power():
     """FIND POWER"""
     delay(0.5)
-    print("\n")
     print("Welcome to Find Power topic!")
     delay(0.5)
     print()
