@@ -2,14 +2,6 @@
 from time import sleep as delay
 import math
 #Import แค่ฟังคชัน conic
-def func_again():
-    """call_back_fun"""
-    print()
-    print("Do you want to calculate in this topic again?(Yes/No): ", end="")
-    yes_no_back = input().upper()
-    if yes_no_back == "YES":
-        conic()
-
 def distance_ptop():
     """DISTANCE BETWEEN POINT AND POINT"""
     delay(0.5)
@@ -34,7 +26,7 @@ def distance_ptop():
     except:
         print()
         print("Please input in the same format as example.")
-    func_again()
+    
 #_____________________________________END POINT TO POINT______________________________________
 def line_made(num):
     """PRINT LINE"""
@@ -70,7 +62,7 @@ def distance_ptol():
     except:
         print()
         print("Please input in the same format as example.")
-    func_again()
+    
 #_____________________________________END POINT TO LINE______________________________________
 
 def distance_parallel():
@@ -101,7 +93,7 @@ def distance_parallel():
     except:
         print()
         print("Please input in the correct form")
-    func_again()
+    
 
 #_____________________________________END PARALLEL LINE______________________________________
     
@@ -128,7 +120,7 @@ def half_2p():
     except:
         print()
         print("Please input in the same format as example.")
-    func_again()
+    
 #_____________________________________END HALF POINT TO POINT______________________________________
 
 def circle_equation():
@@ -179,7 +171,7 @@ def circle_equation():
             print("The Radius of this circle equation is %.2f"%(radius_circle_2))
         except:
             print("Your Equation can't make circle!")
-        func_again()
+        
 #_____________________________________END CIRCLE CONIC______________________________________
 
 def parabola_equation():
@@ -256,7 +248,7 @@ def parabola_equation():
             print("The Latus Lectrum Length of this parabola equation is %.2f"%(latus_lectum_2))
         except:
             print("Your Equation can't make parabola!")
-    func_again()
+    
 #_____________________________________END PARABOLA_____________________________________
 
 def ellipse_equation():
@@ -349,7 +341,7 @@ def ellipse_equation():
             print("The Latus Lectrum Length of this ellipse equation is %.2f"%(latus_lectum_e2))
         except:
             print("Your Equation can't make ellipse!")
-    func_again()
+    
 #_____________________________________END ELLIPSE_______________________________________________________________________________________________________
 def line_made2(num):
     """PRINT LINE"""
@@ -453,7 +445,7 @@ def hyperbola_equation():
                 , line_made2(b_hyperbola_2), asym_min, line_made2(a_hyperbola_2) ))
         except:
             print("Your Equation can't make hyperbola!")
-    func_again()
+    
 #_____________________________________END hyperbola______________________________________
 def conic():
     """Main Function"""
@@ -482,4 +474,4 @@ def conic():
         ellipse_equation()
     elif type_input_conic == "HYPERBOLA EQUATION":
         hyperbola_equation()
-conic()
+

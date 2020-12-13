@@ -5,14 +5,6 @@ import statistics
 from time import sleep as delay
 import sys
 
-def func_again():
-    """call_back_fun"""
-    print()
-    print("Do you want to calculate in this topic again?(Yes/No): ", end="")
-    yes_no_back = input().upper()
-    if yes_no_back == "YES":
-        statistics1()
-
 def mean():
     """MEAN FUNCTION"""
     delay(0.5)
@@ -55,7 +47,7 @@ def mean():
                 answer_no_arrange_mean = statistics.fmean(list_data_no_arrnge_mean)
                 print()
                 print("Your data mean is %.2f"%(answer_no_arrange_mean))
-            func_again()
+            
         #Normal mean with arrange
         elif confirm_mean == "YES":
             print("\n")
@@ -79,7 +71,7 @@ def mean():
             answer_arrange_mean = answer_arrange_mean/divide_arrange_mean
             print()
             print("Your data mean is %.2f"%(answer_arrange_mean))
-            func_again()
+            
     #_______________________________________________________________GEOMETRIC MEAN__________________________________________________________________________________________
     elif type_mean == "GEOMETRIC MEAN":
         delay(0.25)
@@ -110,7 +102,7 @@ def mean():
             answer_geometric_mean = in_gmean**(1/root_gmean)
             print()
             print("Your data geometric mean is %.2f"%(answer_geometric_mean))
-        func_again()
+        
     #_______________________________________________________________HARMONIC MEAN__________________________________________________________________________________________
     elif type_mean == "HARMONIC MEAN":
         delay(0.25)
@@ -144,7 +136,7 @@ def mean():
                 answer_harmonic_mean = top_hmean/bottom_hmean
             print()
             print("Your data harmonic mean is %.2f"%(answer_harmonic_mean))
-        func_again()
+        
     #_______________________________________________________________WEIGHTED MEAN__________________________________________________________________________________________
     elif type_mean == "WEIGHTED MEAN":
         delay(0.25)
@@ -183,7 +175,7 @@ def mean():
                 answer_weight_mean = top_weight_mean/divide_weight_mean
             print()
             print("Your data weighted mean is %.2f"%(answer_weight_mean))
-        func_again()
+        
 #_______________________________________________________________END MEAN__________________________________________________________________________________________
 
 def med():
@@ -220,7 +212,7 @@ def med():
                 answer_median = statistics.median(list_data_median)
                 print()
                 print("Your data median is %.2f"%(answer_median))
-            func_again()
+            
     elif confirm_median == "YES":
         delay(0.25)
         print("\n")
@@ -255,7 +247,7 @@ def med():
         answer_median_arrange = lower_med + (width_range*((median_frequen_sum_half-sum_before_med)/dict_med_arrange[list_use_median]))
         print()
         print("Your data median is %.2f"%(answer_median_arrange))
-        func_again()
+        
 #_______________________________________________________________END MEDIAN__________________________________________________________________________________________
 
 def mod():
@@ -297,7 +289,7 @@ def mod():
                 print("Your data mode is %.2f and %.2f"%(answer_mode[0], answer_mode[1]))
             elif len(answer_mode) > 2:
                 print("Your data don't have the mode :(")
-        func_again()
+        
     elif confirm_mode == "YES":
         delay(0.25)
         print("\n")
@@ -334,7 +326,7 @@ def mod():
             print()
             print("Sorry we can't calculate mode of this data")
             print("Your mode is in the last range")
-        func_again()
+        
 #_______________________________________________________________END MODE__________________________________________________________________________________________
 
 def statistics1():

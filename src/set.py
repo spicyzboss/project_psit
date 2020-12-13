@@ -3,13 +3,6 @@ from time import sleep as delay
 import math
 import json
 #import แค่ฟังคชันชื่อ set_topic()
-def func_again():
-    """call_back_fun"""
-    print()
-    print("Do you want to calculate in this topic again?(Yes/No): ", end="")
-    yes_no_back = input().upper()
-    if yes_no_back == "YES":
-        set_topic()
 
 def union_finder():
     """UNION FINDER FUCTION"""
@@ -45,7 +38,7 @@ def union_finder():
                 print("Your Union set total is %d"%len(ans_set_union))
         except:
             print("Please IInput in the correct format")
-        func_again()
+        
     elif type_union == "FIND TOTAL OF UNION SET":
         delay(0.25)
         print("This Topic will find total of Union set by Formula(2 or 3 sets)")
@@ -71,7 +64,7 @@ def union_finder():
             print("Your Union set total is %d"%ans_set_union)
         except:
             print("Please Input in the correct format")
-        func_again()
+        
 #_____________________________________END Union______________________________________
 
 def intersect_finder():
@@ -117,7 +110,7 @@ def intersect_finder():
                 print("Your intersect set total is %d"%len(ans_set_intersect))
         except:
             print("Please Input in the correct format")
-        func_again()
+        
     elif type_intersect == "CHECK SUB SET":
         delay(0.25)
         print("This Topic will check does B set is sub set of A set?")
@@ -140,7 +133,7 @@ def intersect_finder():
                 print("%s is not sub set of %s"%(bset_sub, aset_sub))
         except:
             print("Please Input in the correct format")  
-        func_again()
+        
 #_____________________________________END INTERSECT______________________________________
 
 def difference_finder():
@@ -181,7 +174,7 @@ def difference_finder():
                 print("Your Main set total is %d"%len(ans_set_difference))
         except:
             print("Please Input in the correct format")
-        func_again()
+        
     elif type_difference == "FIND SYMMETRIC DIFFERENCE SET":
         delay(0.25)
         print("This Topic will find Set after delete intersect")
@@ -204,7 +197,7 @@ def difference_finder():
                 print("Your Symmetric Different set total is %d"%len(ans_set_symdifference))
         except:
             print("Please Input in the correct format")
-        func_again()
+        
 #_____________________________________END DIFFERENCE______________________________________
 def set_topic():
     """Main Function"""
@@ -222,5 +215,4 @@ def set_topic():
         intersect_finder()
     elif type_input_set == "DIFFERENCE":
         difference_finder()
-set_topic()
 #_____________________________________END MAIN FUNCTION______________________________________
