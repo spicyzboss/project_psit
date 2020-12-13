@@ -110,7 +110,7 @@ content = {
         {
             '1. Find Work': 'work.work()',
             '2. Find Energy': 'work.energy()',
-            '3. Find Power_k': 'work.power()',
+            '3. Find Power': 'work.power()',
             '0. Back': 'maincontent_selection()'
         },
         '0. Back':
