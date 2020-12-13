@@ -4,19 +4,18 @@ from os import system
 from os import name
 from time import sleep as delay
 import src.pathway as pathway
-from src.matrix import *
-from src.statistic1 import *
-from src.statistics2 import *
+from src import *
 
-# Define function and variable
+# 
 bootup_words = "COMPUTIES"
 goodbye = "Goodluck and Goodbye :)"
 
 def clear_screen():
     """clear screen"""
-    if name == "nt":
+    # check os
+    if name == "nt": # windows
         system("cls")
-    else:
+    else: # macos and linux
         system("clear")
 
 def say_goodbye():
