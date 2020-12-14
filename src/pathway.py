@@ -72,10 +72,23 @@ content = {
             '6. Variance': 'statistics2.variance()',
             '0. Back': 'maincontent_selection()'
         },
-        "8. Surface area and Volume":
+        "8. Surface area":
         {
         # Insert function here
-            '1. Surface area and Volume': '',
+            '1. Triangle': 'surface.triangle()',
+            '2. Cube': 'surface.cube()',
+            '3. Circle': 'surface.circle()',
+            '0. Back': 'maincontent_selection()'
+        },
+        "9. Volume":
+        {
+        # Insert function here
+            '1. Cylinder': 'volume.cylinder()',
+            '2. Cube': 'volume.cube()',
+            '3. Circle': 'volume.circle()',
+            '4. Pyramid': 'volume.pyramid()',
+            '5. Conical': 'volume.conical()',
+            '6. Prism': 'volume.prism()',
             '0. Back': 'maincontent_selection()'
         },
         "0. Back":
@@ -95,7 +108,11 @@ content = {
             '4. Find Centripetal Force': 'circular.centipetal_force()',
             '0. Back': 'maincontent_selection()'
         },
-        "2. Projectile":
+        "2. Horizontal motion":
+        {
+            '0. Back': 'maincontent_selection()'
+        },
+        "3. Projectile":
         {
             '1. U Vector': 'projectile.u_vector()',
             '2. X Axis': 'projectile.x_axis()',
@@ -106,7 +123,11 @@ content = {
             '7. Find Total Time': 'projectile.time_total()',
             '0. Back': 'maincontent_selection()'
         },
-        "3. Work energy":
+        "4. Vertical motion":
+        {
+            '0. Back': 'maincontent_selection()'
+        },
+        "5. Work energy":
         {
             '1. Find Work': 'work.work()',
             '2. Find Energy': 'work.energy()',

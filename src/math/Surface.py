@@ -18,7 +18,7 @@ def triangle():
         sideb = int(input("ด้านประกอบฐานb(cm) >>> "))
         anw = ((sidea * sideb)**2 - (base)**2)**(1/4)
         print("%.3f" %(base/4 * anw))
-triangle()
+
 def cube():
     typ = input("squre, rectangle, rhombus, parallelogram, kite, trapezoid >>> ")
     if typ == "squre" or typ == "rectangle" or typ == "rhombus" or typ == "parallelogram":
@@ -34,8 +34,7 @@ def cube():
         dif2 = int(input("ด้านคู่ขนาน2(cm) >>> "))
         high = int(input("สูง(cm) >>> "))
         print(0.5 * high * (dif1+dif2))
-cube()
+
 def circle():
     radius = int(input("รัศมี(cm) >>> "))
     print("%.3f" %(22/7 * radius**2))
-circle()

@@ -2,7 +2,7 @@
 # Import module
 from os import system, name
 from time import sleep as delay
-import src.pathway as pathway
+from src import pathway
 #-----------Math subject-----------#
 import src.math.complex_number as complex_num
 import src.math.conic as conic
@@ -11,9 +11,13 @@ import src.math.sequence_series as sequence
 import src.math.set as mathset
 import src.math.statistics1 as statistics1
 import src.math.statistics2 as statistics2
+import src.math.surface as surface
+import src.math.volume as volume
 #-----------Physics subject-----------#
 import src.physics.circular_motion as circular
+import src.physics.horizontal_motion as horizontal
 import src.physics.projectile as projectile
+import src.physics.vertical_motion as vertical
 import src.physics.work_energy as work
 
 bootup_words = "COMPUTIES"
