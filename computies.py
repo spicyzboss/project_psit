@@ -29,14 +29,14 @@ def clear_screen():
 
 def say_goodbye():
     """print goodbye"""
-    clear_screen()
+    clear_screen() # use clear screen
     print(goodbye)
-    raise exit()
+    raise exit() # exit from process
 
 def namebootup():
     """Name loading"""
-    print("\t\t\x1b[5;30;47m" + bootup_words + "\x1b[0m")
-    delay(0.5)
+    print("\t\t\x1b[5;30;47m" + bootup_words + "\x1b[0m") # "\t\t\x1b[5;30;47m" is flashing text in CLI and "\x1b[0m" is reset to default
+    delay(0.5) # delay next process
 
 def print_subject_list():
     """subject printout"""
@@ -160,11 +160,8 @@ def call_another_file():
     try:
         data = pathway.content[subject][list(pathway.content[subject].keys())[content-1]][list(pathway.content[subject][list(pathway.content[subject].keys())[content-1]])[subcontent-1]]
         clear_screen()
-        try:
-            eval(data)
-        except:
-            print('Coming soon...')
-            delay(0.5)
+        namebootup()
+        eval(data)
     except IndexError:
         invalid_input()
         subcontent_selection()
