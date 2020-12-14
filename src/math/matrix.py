@@ -104,7 +104,7 @@ def determinant(out, matrix):
 
 def cramer(matrix):
     '''Cramer\'s rule'''
-    char, constant, copy = [i for i in input('All variable: ').split()], [], {0: matrix.copy(), 1: matrix.copy()}
+    char, constant, copy = [i for i in input('All variable: ').split()], [], {}
     time = matrix[0][-1]
     if len(char) != time[1]:
         print('Wrong input!!!!')
@@ -120,10 +120,10 @@ def cramer(matrix):
                 break
         det_a = determinant('A', matrix)
         for i in range(time[1]):
-            print(copy[i])
+            copy[0] = matrix[0].copy()
             for j in range(time[0]):
-                copy[i][0][j][i] = constant[j]
-            print(f'{char[i]} value:', (determinant(char[i], copy[i])/det_a))
+                copy[0][j][i] = constant[j]
+            print(f'{char[i]} value:', (determinant(char[i], copy)/det_a))
             print(matrix)
 
 def before_addsub(addsub, matrix):
