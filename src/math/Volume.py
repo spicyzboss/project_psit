@@ -1,9 +1,10 @@
 import math
-def Cylinder():#ทรงกระบอก
+
+def cylinder():#ทรงกระบอก
     radius = int(input("ใส่ค่ารัศมี(cm) >>> "))
     space = math.pi * radius**2
     high = int(input("ใส่ค่าความสูง(cm) >>> "))
-    print("%.3f" %(high * space))    
+    print("%.3f" %(high * space))
 
 def cube():#เหลียม
     side = int(input("ใส่ค่าของด้าน(cm) >>> "))
@@ -25,7 +26,7 @@ def pyramid():#ปิรามิด
     elif typ == "cube":
         print("%.3f" %(volume * high/3))
 
-def Conical():#ทรงกรวย
+def conical():#ทรงกรวย
     radius = int(input("ใส่ค่ารัศมี(cm) >>> "))
     high = int(input("ใส่ค่าความสูง(cm) >>> "))
     print("%.3f" %(math.pi * radius**2 * high / 3))
@@ -46,4 +47,3 @@ def prism():#ปริซึม
         high = int(input("ใส่ค่าความสูง(cm) >>> "))
         cir = radius * math.pi
         print("%.3f" %(cir * high))
-

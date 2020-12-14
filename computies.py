@@ -11,8 +11,8 @@ import src.math.sequence_series as sequence
 import src.math.set as mathset
 import src.math.statistics1 as statistics1
 import src.math.statistics2 as statistics2
-import src.math.Surface as surface
-import src.math.Volume as volume
+import src.math.surface as surface
+import src.math.volume as volume
 #-----------Physics subject-----------#
 import src.physics.circular_motion as circular
 import src.physics.horizontal_motion as horizontal
