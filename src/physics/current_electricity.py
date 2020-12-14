@@ -10,7 +10,7 @@ def electric_i():
     q = float(input("Q : "))
     t = float(input("t : "))
     print("I = %.2f" %(q/t))
-electric_i()
+
 
 def electric_q():
     """ find Q """
@@ -18,7 +18,7 @@ def electric_q():
     i = float(input("I : "))
     t = float(input("t : "))
     print("Q = %.2f C" %(i*t))
-electric_q()
+
 
 print("Finding electric charge in case of known cross section area")
 def electric_know_tuanum_find_i():
@@ -33,7 +33,7 @@ def electric_know_tuanum_find_i():
     a = float(input("A : "))
     n = float(input("n : "))
     print("I = %.2f A" %(e*v*a*n))
-electric_know_tuanum_find_i()
+
 
 def electric_know_tuanum_find_v():
     """ Find v """
@@ -43,7 +43,7 @@ def electric_know_tuanum_find_v():
     a = float(input("A : "))
     n = float(input("n : "))
     print("v = %.2f m/s" %(i/(n*e*a)))
-electric_know_tuanum_find_v()
+
 
 def electric_know_tuanum_find_a():
     """ Find A """
@@ -53,7 +53,7 @@ def electric_know_tuanum_find_a():
     v = float(input("v : "))
     n = float(input("n : "))
     print("A = %.2f m^2" %(i/(e*v*n)))
-electric_know_tuanum_find_a()
+
 
 def electric_know_tuanum_find_n():
     """ Find n """
@@ -62,4 +62,3 @@ def electric_know_tuanum_find_n():
     v = float(input("v : "))
     a = float(input("A : "))
     print("n = %.2f particle/m^3" %(i/(e*v*a)))
-electric_know_tuanum_find_n()
