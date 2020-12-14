@@ -1,28 +1,21 @@
 """Math - Matrix"""
 # Define function
-def main():
-    '''Define and clear variable'''
-    global matrix
-    global process
-    matrix = {}
-    process = True
-
 def error_int():
     '''Error input'''
-    global process
     print("Error input (your input is not integer)!!")
-    process = False
+    return False
 
 def create_matrix(loop=1):
     '''Create matrix'''
-    global process
+    matrix = {}
+    process = True
     for number in range(loop):
         print(f'\tMatrix {number+1}')
         try:
             row = int(input('Row: '))
             column = int(input('Column: '))
         except:
-            error_int()
+            process = error_int()
             break
         for x in range(row):
             line = input(f'Row - {x+1}: ')
@@ -45,8 +38,18 @@ def create_matrix(loop=1):
             print('| Column: 2'.ljust(30), end='|\n')
             print('| Row - 1: 2 6'.ljust(30), end='|\n')
             print('| Row - 2: 1 9'.ljust(30), end='|\n'+'-'*30)
+    return process, matrix
 
-def addder(dimen, row=0):
+def print_output(output, column):
+    '''Print output matrix'''
+    print('Answer', end='\n======\n')
+    for i in output:
+        print(end="[")
+        for j in range(column):
+            print('%5d'%(i[j]), end='|'*(j != column-1))
+        print("]")
+
+def addder(dimen, matrix, row=0):
     '''Addition'''
     output, column = matrix[0][:-1], dimen[1]
     for i in matrix[1][:-1]:
@@ -57,7 +60,7 @@ def addder(dimen, row=0):
         row += 1
     print_output(output, column)
 
-def subtract(dimen, row=0):
+def subtract(dimen, matrix, row=0):
     '''Subtraction'''
     output, column = matrix[0][:-1], dimen[1]
     for i in matrix[1][:-1]:
@@ -68,7 +71,7 @@ def subtract(dimen, row=0):
         row += 1
     print_output(output, column)
 
-def multiple():
+def multiple(matrix):
     '''Multiplication'''
     output = []
     mxt1, mxt2 = matrix[0], matrix[1]
@@ -80,10 +83,11 @@ def multiple():
         output.append(run)
     print_output(output, mxt2[-1][1])
 
-def determinant(out):
+def determinant(out, matrix):
     '''Determinant'''
     det = 0
     row_col = matrix[0][-1][0]
+    print_output(matrix[0][:-1], matrix[0][-1][1])
     for up in range(row_col-1*(row_col == 2)):
         total = 1
         for i in range(row_col):
@@ -95,99 +99,87 @@ def determinant(out):
             total *= matrix[0][i][(down+range(row_col)[::-1][i])%row_col]
         det -= total
     if out == 'A':
-        print(f'Det {out}:', det)
+        print(f'\nDet {out}:', det)
     return det
 
-def cramer():
+def cramer(matrix):
     '''Cramer\'s rule'''
-    global matrix
-    char, constant = [i for i in input('All variable: ').split()], []
+    char, constant, copy = [i for i in input('All variable: ').split()], [], {0: matrix.copy(), 1: matrix.copy()}
     time = matrix[0][-1]
     if len(char) != time[1]:
         print('Wrong input!!!!')
         print('Correct form'.center(30, '-'))
         print('| All variable: x y z (If you input 3 column)'.ljust(30), end='|\n'+'-'*30)
     else:
-        print(f'\tConstant value')
+        print(f'\n\tConstant value')
         for i in range(time[0]):
             try:
                 constant.append(int(input(f'Cons {i+1}: ')))
             except:
                 error_int()
                 break
-        det_a = determinant('A')
+        det_a = determinant('A', matrix)
         for i in range(time[1]):
-            copy = matrix
+            print(copy[i])
             for j in range(time[0]):
-                matrix[0][j][i] = constant[j]
-            print(f'{char[i]} value:', determinant(char[i])/det_a)
-            matrix = copy
+                copy[i][0][j][i] = constant[j]
+            print(f'{char[i]} value:', (determinant(char[i], copy[i])/det_a))
+            print(matrix)
 
-def print_output(output, column):
-    '''Print output matrix'''
-    print('Answer', end='\n======\n')
-    for i in output:
-        print(end="[")
-        for j in range(column):
-            print('%5d'%(i[j]), end='|'*(j != column-1))
-        print("]")
-
-def before_addsub(addsub):
+def before_addsub(addsub, matrix):
     '''Check matrix'''
     if matrix[0][-1] == matrix[1][-1]:
         dimension = matrix[0][-1]
         if addsub == 'add':
-            addder(dimension)
+            addder(dimension, matrix)
         else:
-            subtract(dimension)
+            subtract(dimension, matrix)
     else:
         print('Diffence shape')
 
-def before_multi():
+def before_multi(matrix):
     '''Check matrix'''
     if matrix[0][-1] == matrix[1][-1][::-1]:
-        multiple()
+        multiple(matrix)
     else:
         print("I can't multiple this matrix")
 
-def before_det():
+def before_det(matrix):
     '''Check matrix'''
     if matrix[0][-1][0] == matrix[0][-1][1]:
-        determinant('A')
+        determinant('A', matrix)
     else:
         print("I can't find det value")
 
-def before_cramer():
+def before_cramer(matrix):
     '''Check matrix'''
     if matrix[0][-1][0] == matrix[0][-1][1]:
-        cramer()
+        cramer(matrix)
     else:
         print("It hard to use cramer's rule")
 
 def add_sub(mode):
     '''Addition & Subtraction'''
-    main()
-    create_matrix(2)
+    process, matrix = create_matrix(2)
     if process:
-        before_addsub(mode)
+        before_addsub(mode, matrix)
 
 def multi():
     '''Multiplication'''
-    main()
-    create_matrix(2)
+    process, matrix = create_matrix(2)
     if process:
-        before_multi()
+        before_multi(matrix)
 
 def find_det():
     '''Determinant'''
-    main()
-    create_matrix()
+    process, matrix = create_matrix()
     if process:
-        before_det()
+        before_det(matrix)
 
 def find_cramer():
     '''Cramer\'s rule'''
-    main()
-    create_matrix()
+    process, matrix = create_matrix()
     if process:
-        before_cramer()
+        before_cramer(matrix)
+
+find_cramer()
