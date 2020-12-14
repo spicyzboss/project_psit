@@ -2,7 +2,7 @@
 # Import module
 from os import system, name
 from time import sleep as delay
-import src.pathway as pathway
+from src import pathway
 #-----------Math subject-----------#
 import src.math.complex_number as complex_num
 import src.math.conic as conic
