@@ -22,11 +22,6 @@ def print_truth_table():
     print("| T |  F |")
     print("| F |  T |")
     print("|___|____|")
-would = input("Would you like to see a Truth Table? (yes/no) : ")
-if would == "yes":
-    print_truth_table()
-else:
-    pass
 
 def all_sombat():
     print("\n")
@@ -57,11 +52,6 @@ def all_sombat():
     print("!(p ∨ q) ≡ !p ∧ !q")
     print("!(p → q) ≡ p ∧ !q")
     print("!(p ↔ q) ≡ !p ↔ q ≡ p ↔ !q\n")
-equivalence = input("Would you like to see a Equivalence Property? (yes/no) : ")
-if equivalence == "yes":
-    all_sombat()
-else:
-    pass
 
 def tautology():
     """ Tautology is everything is always true """
@@ -77,11 +67,6 @@ def tautology():
     print("=> Popularly used with ↔")
     print("=> In case Δ ↔ Ο if Δ ≡ Ο")
     print("=> So that Δ ↔ Ο is an tautology\n")
-tautologys = input("Would you like to see a Tautology? (yes/no) : ")
-if tautologys == "yes":
-    tautology()
-else:
-    pass
 
 def justification():
     """ Justification is reasonable """
@@ -93,11 +78,6 @@ def justification():
     print("2. Make every reason are T, find the truth value and substitute the result.")
     print("=> If the result is T, then it is reasonable.")
     print("=> If the result is F, then it is unreasonable.\n")
-justifications = input("Would you like to see a Justification? (yes/no) : ")
-if justifications == "yes":
-    justification()
-else:
-    pass
 
 def quantifier():
     """ Quantifier is something is developer don't know, you should find by yourself """
@@ -110,8 +90,3 @@ def quantifier():
     print(" => ∃x∀y[P(x,y)] Have x at least one x and pair with all y that is T will has a truth value of T")
     print(" => ∀x∃y[P(x,y)] Have all x and pair with some y that is T will has a truth value of T")
     print(" => ∀x∀y[P(x,y)] Have (x,y) at least one pair is F will has a truth value of F\n")
-quantifiers = input("Would you like to see a Quantifier? (yes/no) : ")
-if quantifiers == "yes":
-    quantifier()
-else:
-    pass
