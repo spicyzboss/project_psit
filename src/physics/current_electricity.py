@@ -1,8 +1,9 @@
 """ Current Electricity """
-print("Electric Current")
-print("Formula is I = Q/t or Q = It")
+
 def electric_i():
     """ find I """
+    print("Electric Current")
+    print("Formula is I = Q/t or Q = It")
     print("I = Electric Current (A)")
     print("Q = Amount of electric charge passes through a cross section area (C)")
     print("t = Time when an electric charge passes through a cross section area (s)")
@@ -14,15 +15,18 @@ def electric_i():
 
 def electric_q():
     """ find Q """
+    print("Electric Current")
+    print("Formula is I = Q/t or Q = It")
     print("Find Q")
     i = float(input("I : "))
     t = float(input("t : "))
     print("Q = %.2f C" %(i*t))
 
 
-print("Finding electric charge in case of known cross section area")
+
 def electric_know_tuanum_find_i():
     """ Find I """
+    print("Finding electric charge in case of known cross section area")
     print("e = 1.6*(10**(-19))")
     print("v = Electron Speed (m/s)")
     print("A = Cross section area (m^2)")
@@ -37,6 +41,11 @@ def electric_know_tuanum_find_i():
 
 def electric_know_tuanum_find_v():
     """ Find v """
+    print("Finding electric charge in case of known cross section area")
+    print("e = 1.6*(10**(-19))")
+    print("v = Electron Speed (m/s)")
+    print("A = Cross section area (m^2)")
+    print("n = Number of electrons in 1 unit volume (particle/m^3)")
     print("Find v")
     e = 1.6*(10**(-19))
     i = float(input("I : "))
@@ -47,6 +56,11 @@ def electric_know_tuanum_find_v():
 
 def electric_know_tuanum_find_a():
     """ Find A """
+    print("Finding electric charge in case of known cross section area")
+    print("e = 1.6*(10**(-19))")
+    print("v = Electron Speed (m/s)")
+    print("A = Cross section area (m^2)")
+    print("n = Number of electrons in 1 unit volume (particle/m^3)")
     print("Find A")
     e = 1.6*(10**(-19))
     i = float(input("I : "))
@@ -57,6 +71,11 @@ def electric_know_tuanum_find_a():
 
 def electric_know_tuanum_find_n():
     """ Find n """
+    print("Finding electric charge in case of known cross section area")
+    print("e = 1.6*(10**(-19))")
+    print("v = Electron Speed (m/s)")
+    print("A = Cross section area (m^2)")
+    print("n = Number of electrons in 1 unit volume (particle/m^3)")
     e = 1.6*(10**(-19))
     i = float(input("I : "))
     v = float(input("v : "))

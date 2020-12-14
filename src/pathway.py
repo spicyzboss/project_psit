@@ -120,6 +120,11 @@ content = {
         },
         "2. Horizontal motion":
         {
+            '1. Find speed': 'horizontal.speed()',
+            '2. Find acceleration': 'horizontal.acceleration()',
+            '3. Find distance': 'horizontal.distance()',
+            '4. Find displacement': 'horizontal.latespeed()',
+            '5. Find latespeed': 'horizontal.latespeed()',
             '0. Back': 'maincontent_selection()'
         },
         "3. Projectile":
@@ -135,6 +140,8 @@ content = {
         },
         "4. Vertical motion":
         {
+            '1. Find last speed': 'vertical.lastspeed()',
+            '2. Find displacement': 'vertical.displacement()',
             '0. Back': 'maincontent_selection()'
         },
         "5. Work energy":
@@ -142,6 +149,26 @@ content = {
             '1. Find Work': 'work.work()',
             '2. Find Energy': 'work.energy()',
             '3. Find Power': 'work.power()',
+            '0. Back': 'maincontent_selection()'
+        },
+        "6. Current electricity":
+        {
+            '1. Find I from I=Q/T': 'electricity.electric_i()',
+            '2. Find Q from I=Q/T': 'electricity.electric_q()',
+            '3. Find I in case of known cross section area': 'electricity.electric_know_tuanum_find_i()',
+            '4. Find V in case of known cross section area': 'electricity.electric_know_tuanum_find_v()',
+            '5. Find A in case of known cross section area': 'electricity.electric_know_tuanum_find_a()',
+            '6. Find N in case of known cross section area': 'electricity.electric_know_tuanum_find_n()',
+            '0. Back': 'maincontent_selection()'
+        },
+        "7. Resistor":
+        {
+            '1. Find R from Electrical Resistivity': 'resistor.electrical_resistivity_r()',
+            '2. Find P from Electrical Resistivity': 'resistor.electrical_resistivity_p()',
+            '3. Find I from Electrical Resistivity': 'resistor.electrical_resistivity_i()',
+            '4. Find A from Electrical Resistivity': 'resistor.electrical_resistivity_a()',
+            '5. Find P from Electrical Conductivity': 'resistor.electrical_conductivity_p()',
+            '6. Find Q from Electrical Conductivity': 'resistor.electrical_conductivity_q()',
             '0. Back': 'maincontent_selection()'
         },
         '0. Back':
