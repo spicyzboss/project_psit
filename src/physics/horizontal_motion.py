@@ -1,27 +1,27 @@
 def speed():#อัตราเร็ว
-    dis = int(input("การกระจัด m"))
-    tim = int(input("เวลา m/s^2"))
-    print(dis/tim)
+    dis = int(input("displacement m"))
+    tim = int(input("time m/s^2"))
+    print(dis/tim, "m/s")
 
 def acceleration():#ความเร่ง
-    fspeed = int(input("ความเร็วต้น m/s"))
-    lspeed = int(input("่ความเร็วปลาย m/s"))
-    tim = int(input("เวลา m/s^2"))
-    print(lspeed - fspeed / tim)
+    fspeed = int(input("early speed m/s"))
+    lspeed = int(input("่late speed m/s"))
+    tim = int(input("time m/s^2"))
+    print(lspeed - fspeed / tim, "m/s^2")
 
 def distance():#ระยะทาง
-    speed = int(input("ความเร็ว m/s"))
-    tim = int(input("เวลา m/s^2"))
-    print(speed * tim)
+    speed = int(input("speed m/s"))
+    tim = int(input("time m/s^2"))
+    print(speed * tim, "m")
 
 def displacement():#การกระจัด
-    fspeed = int(input("ความเร็วต้น m/s"))
-    lspeed = int(input("่ความเร็วปลาย m/s"))
-    tim = int(input("เวลา m/s^2"))
-    print((fspeed + lspeed) * tim/2)
+    fspeed = int(input("early speed m/s"))
+    lspeed = int(input("่late speed m/s"))
+    tim = int(input("time m/s^2"))
+    print((fspeed + lspeed) * tim/2, "m")
 
-def lastspeed():#ความเร็วปลาย
-    fspeed = int(input("ความเร็วต้น m/s"))
-    acc = int(input("ความเร่ง m/s^2"))
-    tim = int(input("เวลา m/s^2"))
-    print(fspeed + (acc * tim))
+def latespeed():#ความเร็วปลาย
+    fspeed = int(input("early speed m/s"))
+    acc = int(input("acceleration m/s^2"))
+    tim = int(input("time m/s^2"))
+    print(fspeed + (acc * tim), "m/s")
