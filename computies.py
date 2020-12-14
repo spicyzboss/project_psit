@@ -15,7 +15,9 @@ import src.math.Surface as surface
 import src.math.Volume as volume
 #-----------Physics subject-----------#
 import src.physics.circular_motion as circular
+import src.physics.horizontal_motion as horizontal
 import src.physics.projectile as projectile
+import src.physics.vertical_motion as vertical
 import src.physics.work_energy as work
 
 bootup_words = "COMPUTIES"
