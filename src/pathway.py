@@ -16,7 +16,7 @@ content = {
             '3. Polar complex number': 'complex_num.polar_complex_number()',
             '0. Back': 'maincontent_selection()'
         },
-        "2. Conic":
+        "2. Conic Section":
         {
             '1. Distance between Point and Point': 'conic.distance_ptop()',
             '2. Distance between Point and Line': 'conic.distance_ptol()',
