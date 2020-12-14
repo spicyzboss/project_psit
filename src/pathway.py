@@ -72,10 +72,23 @@ content = {
             '6. Variance': 'statistics2.variance()',
             '0. Back': 'maincontent_selection()'
         },
-        "8. Surface area and Volume":
+        "8. Volume":
         {
         # Insert function here
-            '1. Surface area and Volume': '',
+            '1. Cylinder': 'volume.Cylinder()',
+            '2. Cube': 'volume.cube()',
+            '3. Circle': 'volume.circle()',
+            '4. Pyramid': 'volume.pyramid()',
+            '5. Conical': 'volume.Conical()',
+            '6. Prism': 'volume.prism()',
+            '0. Back': 'maincontent_selection()'
+        },
+        "9. Surface area":
+        {
+        # Insert function here
+            '1. Triangle': 'surface.triangle()',
+            '2. Cube': 'surface.cube()',
+            '3. Circle': 'surface.circle()',
             '0. Back': 'maincontent_selection()'
         },
         "0. Back":
