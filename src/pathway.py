@@ -91,6 +91,16 @@ content = {
             '6. Prism': 'volume.prism()',
             '0. Back': 'maincontent_selection()'
         },
+        "10. Logic":
+        {
+        # Insert function here
+            '1. Truth Table': 'logic.print_truth_table()',
+            '2. Tautology': 'logic.tautology()',
+            '3. Justification': 'logic.justification()',
+            '4. Quantifier': 'logic.quantifier()',
+            '4. All rule': 'logic.all_sombat()',
+            '0. Back': 'maincontent_selection()'
+        },
         "0. Back":
         {
             ''# Don't Touch me na kub :)

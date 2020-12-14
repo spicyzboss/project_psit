@@ -1,12 +1,11 @@
 """ Current Electricity """
-""" เดี๋ยวแก้เป็น Eng """
 print("Electric Current")
-print("Formula is I = Q/t หรือ Q = It")
+print("Formula is I = Q/t or Q = It")
 def electric_i():
     """ find I """
     print("I = Electric Current (A)")
-    print("Q คือ ปริมาณประจุไฟฟ้าที่ผ่านภาคตัด (C)")
-    print("t คือ เวลาที่ประจุไฟฟ้าเคลื่อนที่ผ่านภาคตัด (s)")
+    print("Q = Amount of electric charge passes through a cross section area (C)")
+    print("t = Time when an electric charge passes through a cross section area (s)")
     print("Find I")
     q = float(input("Q : "))
     t = float(input("t : "))
@@ -21,13 +20,13 @@ def electric_q():
     print("Q = %.2f C" %(i*t))
 electric_q()
 
-print("การหากระแสไฟฟ้าในกรณีที่ทราบพื้นที่หน้าตัดของตัวนำ")
+print("Finding electric charge in case of known cross section area")
 def electric_know_tuanum_find_i():
     """ Find I """
     print("e = 1.6*(10**(-19))")
-    print("v คือ ความเร็วรอยเลื่อนของอิเล็กตรอน (m/s)")
-    print("A คือ พื้นที่หน้าตัดของตัวนำ (m^2)")
-    print("n คือ จำนวนอิเล็กตรอนใน 1 หน่วยปริมาตร (อนุภาค/m^3)")
+    print("v = Electron Speed (m/s)")
+    print("A = Cross section area (m^2)")
+    print("n = Number of electrons in 1 unit volume (particle/m^3)")
     print("Find I")
     e = 1.6*(10**(-19))
     v = float(input("v : "))
