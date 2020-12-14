@@ -16,8 +16,10 @@ import src.math.volume as volume
 import src.math.logic as logic
 #-----------Physics subject-----------#
 import src.physics.circular_motion as circular
+import src.physics.current_electricity as electricity
 import src.physics.horizontal_motion as horizontal
 import src.physics.projectile as projectile
+import src.physics.resistor as resistor
 import src.physics.vertical_motion as vertical
 import src.physics.work_energy as work
 
