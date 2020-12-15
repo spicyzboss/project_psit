@@ -20,7 +20,7 @@ content = {
         {
             '1. Distance between Point and Point': 'conic.distance_ptop()',
             '2. Distance between Point and Line': 'conic.distance_ptol()',
-            '3. Distance between Point and Line': 'conic.distance_parallel()',
+            '3. Distance between Parallel Line': 'conic.distance_parallel()',
             '4. Middle Point between 2 points': 'conic.half_2p()',
             '5. Circle Equation': 'conic.circle_equation()',
             '6. Parabola Equation': 'conic.parabola_equation()',
