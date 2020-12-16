@@ -35,7 +35,7 @@ content = {
             '2. Subtraction': 'matrix.add_sub("sub")',
             '3. Multiplication': 'matrix.multi()',
             '4. Determinant': 'matrix.find_det()',
-            '5. Cramer\'s rule': 'matrix.find_cramer()',
+            #'5. Cramer\'s rule': 'matrix.find_cramer()',
             '0. Back': 'maincontent_selection()'
         },
         "4. Sequence series":
