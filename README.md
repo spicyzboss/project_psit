@@ -4,7 +4,7 @@
 > - [Google Document](https://docs.google.com/document/d/1X8kYAX5oK_Ore2yMhBqJ1PykURkrvumlSUmCc2Mp1ok/edit?usp=sharing)
 > - [Youtube](https://docs.google.com/document/d/1X8kYAX5oK_Ore2yMhBqJ1PykURkrvumlSUmCc2Mp1ok/edit?usp=sharing)
 ##### :boom: ***Objective***
-> 1. เพื่อให้ผู้ใช้ได้หาค่าตามที่ต้องการหากมีตัวแปรแต่ไม่ทราบว่าจะใช้สูตรใดในการหา
+> 1. เพื่อให้ผู้ใช้ได้หาค่าตามที่ต้องการหากมีตัวแปรแต่ไม่ทราบว่าจะใช้สูตรใดในการหา<br>
 > 2. เพื่อให้ผู้ใช้ช่วยลดเวลาในการทำโจทย์ หรือตอบคำถามเกี่ยวกับ คณิตศาสตร์และฟิสิกส์ 
 
 
