@@ -87,7 +87,6 @@ def determinant(out, matrix):
     '''Determinant'''
     det = 0
     row_col = matrix[0][-1][0]
-    print_output(matrix[0][:-1], matrix[0][-1][1])
     for up in range(row_col-1*(row_col == 2)):
         total = 1
         for i in range(row_col):
@@ -124,7 +123,6 @@ def cramer(matrix):
             for j in range(time[0]):
                 copy[0][j][i] = constant[j]
             print(f'{char[i]} value:', (determinant(char[i], copy)/det_a))
-            print(matrix)
 
 def before_addsub(addsub, matrix):
     '''Check matrix'''
@@ -139,7 +137,7 @@ def before_addsub(addsub, matrix):
 
 def before_multi(matrix):
     '''Check matrix'''
-    if matrix[0][-1] == matrix[1][-1][::-1]:
+    if matrix[0][-1][1] == matrix[1][-1][0]:
         multiple(matrix)
     else:
         print("I can't multiple this matrix")
@@ -181,5 +179,3 @@ def find_cramer():
     process, matrix = create_matrix()
     if process:
         before_cramer(matrix)
-
-find_cramer()
